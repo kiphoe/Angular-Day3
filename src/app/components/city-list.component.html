@@ -1,0 +1,33 @@
+<form #form="ngForm" (ngSubmit)="processForm(form)" 
+fxLayout="row column" fxLayoutGap="10px">
+<div fxLayout="row column" fxLayoutGap="15px" fxLayoutAlign="start center">  
+<mat-form-field>
+    <input type="text" name="city" placeholder="City name" size="100"
+    ngModel matInput required>
+  </mat-form-field>
+
+  
+  <button type="submit" mat-raised-button colour="accent" 
+  [disabled]="form.invalid">
+    <mat-icon>search</mat-icon>
+  </button>
+  </div>
+</form>
+
+<h3>Cities</h3>
+
+<mat-list>
+  <!-- cities is from city-list.component.ts-->
+  <mat-list-item *ngFor="let c of cities" (click)="getWeather (c)">
+    {{c | uppercase}}
+  </mat-list-item>
+</mat-list>
+
+<!-- by routerlink-->
+<mat-list>
+    <a *ngFor="let c of cities"
+       mat-list-item
+        [routerLink]="['/weather', c]">{{ c | uppercase }}</a>
+  </mat-list>
+
+

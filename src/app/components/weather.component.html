@@ -1,0 +1,18 @@
+<div (swipeleft)="back()">
+
+    <h1>{{ cityName | uppercase }}</h1>
+  <!--
+    <agm-map [latitude]="coordinates.latitude" [longitude]="coordinates.longitude">
+      <agm-marker [latitude]="coordinates.latitude" [longitude]="coordinates.longitude">
+      </agm-marker>
+    </agm-map>
+  -->
+  
+  
+  <h4>Lat: {{ coordinates.latitude }}, Lon: {{ coordinates.longitude }}</h4>
+  <div *ngFor="let w of weather" fxLayout="row column" fxLayoutAlign="start center">
+    <img src="http://openweathermap.org/img/w/{{w.icon}}.png" alt="">
+    <span>{{ w.description }}</span>
+
+  </div>
+</div>
