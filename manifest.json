@@ -1,4 +1,11 @@
 {
+  "name": "Yet Another Weather App",
+  "short_name": "YAWA",
+  "theme_color": "#2196f3",
+  "background_color": "#2196f3",
+  "display": "fullscreen",
+  "Scope": "/",
+  "start_url": "/Angular-Day3/",
   "icons": [
     {
       "src": "images/icons/icon-72x72.png",
